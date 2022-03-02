@@ -1,0 +1,40 @@
+nav,
+ul {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  padding: 0 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  padding: 17px 5px;
+}
+
+.active {
+  background-color: rgb(255, 251, 241);
+}
+
+.header-img {
+  background-image: linear-gradient(
+      rgba(139, 139, 139, 0.5),
+      rgba(139, 139, 139, 0.5)
+    ),
+    url(../images/gathering-area.jpg);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  height: 800px;
+}
+
+@media only screen and (max-width: 898px) {
+  ul {
+    display: none;
+  }
+}
