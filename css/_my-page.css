@@ -1,0 +1,20 @@
+.my-page {
+  display: flex;
+  padding: 50px 20px;
+}
+
+.latest-section {
+  max-width: 300px;
+  width: 100%;
+}
+
+.my-page .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  cursor: pointer;
+}
