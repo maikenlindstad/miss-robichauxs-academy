@@ -1,4 +1,5 @@
 import { getUsername } from "../../utils/storage.js";
+import logoutButton from "./logutButton.js";
 
 export default function createMenu() {
     const { pathname } = document.location;
@@ -10,7 +11,8 @@ export default function createMenu() {
     let authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"><li>My page</li></a>`;
 
     if (username) {
-        authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"><li>${username}'s page</li></a>`;
+        authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"><li>${username}'s page</li></a>
+        <a href="" id="logout"><li>Log out</li></a>`;
     }
 
     menuContainer.innerHTML = `<ul>
@@ -20,4 +22,6 @@ export default function createMenu() {
     <a href="" class="disabled ${pathname === "/" ? "active" : ""}"><li>Enrollment</li></a>
     ${authLink}
 </ul>`;
+
+    logoutButton();
 }
