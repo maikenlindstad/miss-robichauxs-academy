@@ -62,8 +62,8 @@ h1 {
 }
 
 p {
-  max-width: 800px;
-  font-size: 1.4rem;
+  max-width: 1000px;
+  font-size: 1.2rem;
 }
 
 .disabled,
@@ -75,6 +75,14 @@ p {
   font-size: large;
   font-weight: 600;
 }
+
+.latest-news a {
+  text-transform: none;
+}
+
+/* .latest-news div {
+  margin: 10px 0;
+} */
 
 @media only screen and (max-width: 1200px) {
   h1 {

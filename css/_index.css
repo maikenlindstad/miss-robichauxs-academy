@@ -1,6 +1,5 @@
 .intro-section div,
 .seven-wonders-section div {
-  /* margin: auto; */
   margin: 50px;
 }
 
@@ -23,7 +22,7 @@
 
 .intro-section,
 .latest-news {
-  border: solid #dfd6c2 10px;
+  border: solid #dfd6c2 6px;
   margin: 40px;
   border-radius: 30px;
   background-color: #fffbf3;
@@ -40,13 +39,16 @@
 }
 
 .latest-news {
-  border: solid #dfd6c2 10px;
+  border: solid #dfd6c2 6px;
   background-color: #fffbf3;
 }
 .latest-news a:hover {
   cursor: pointer;
   color: black;
   text-decoration: underline;
+}
+.latest-news div {
+  margin: 20px;
 }
 
 @media only screen and (max-width: 1200px) {
