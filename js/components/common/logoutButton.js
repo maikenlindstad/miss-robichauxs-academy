@@ -10,7 +10,7 @@ export default function logoutButton() {
 
             if (doLogout) {
                 clearStorage();
-                location.href = '/';
+                window.location.replace('https://miss-robichauxs-academy.netlify.app/index.html')
             }
         }
     }
