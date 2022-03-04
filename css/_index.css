@@ -1,6 +1,32 @@
-.intro-section div {
+.intro-section div,
+.seven-wonders-section div {
   /* margin: auto; */
   margin: 50px;
+}
+
+.intro-section,
+.seven-wonders-section {
+  display: flex;
+}
+
+.intro-section,
+.latest-news,
+.seven-wonders-section {
+  padding: 20px;
+}
+
+.intro-section,
+.latest-news,
+.seven-wonders-section {
+  justify-content: center;
+}
+
+.intro-section,
+.latest-news {
+  border: solid #dfd6c2 10px;
+  margin: 40px;
+  border-radius: 30px;
+  background-color: #fffbf3;
 }
 
 .stairs {
@@ -13,18 +39,36 @@
   border-radius: 40px;
 }
 
+.latest-news {
+  border: solid #dfd6c2 10px;
+  background-color: #fffbf3;
+}
+.latest-news a:hover {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+}
+
 @media only screen and (max-width: 1200px) {
-  .intro-section {
+  .intro-section,
+  .seven-wonders-section {
     flex-wrap: wrap;
   }
 }
 
 @media only screen and (max-width: 898px) {
-  .intro-section {
+  .intro-section,
+  .latest-news,
+  .seven-wonders-section {
     padding: 5px;
     margin: 20px 10px;
   }
-  .intro-section div {
+  .intro-section div,
+  .seven-wonders-section div {
     margin: 15px;
+  }
+
+  #stevie-nicks {
+    height: 150px;
   }
 }

@@ -30,6 +30,7 @@ li {
   background-size: cover;
   background-position-y: center;
   background-position-x: center;
+  background-attachment: fixed;
   height: 800px;
 }
 

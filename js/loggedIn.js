@@ -1,6 +1,8 @@
-// import displayMessage from "./components/common/displayMessage.js";
+import displayMessage from "./components/common/displayMessage.js";
 import { baseUrl } from "./settings/api.js";
+import createMenu from "./components/common/createMenu.js";
 
+createMenu();
 const myPageUrl = baseUrl + "/my-pages?populate=*";
 
 (async function () {
@@ -12,15 +14,19 @@ const myPageUrl = baseUrl + "/my-pages?populate=*";
 
         container.innerHTML = "";
 
+        // throw "custom";
+
         json.data.forEach(function (mypage) {
-            container.innerHTML += `<a class="card">
+            container.innerHTML += `<a class="card" href="details.html?id=${mypage.id}">
                                         <img src="http://localhost:1337${mypage.attributes.excerpt.data.attributes.url}">
                                         <h2>${mypage.attributes.Title}</h2>            
                                     </a>`;
         })
 
-        console.log(json.data);
-    } catch (error) {
 
+        // console.log(json.data);
+    } catch (error) {
+        console.log(error);
+        displayMessage("error", error, ".container");
     }
 })();
