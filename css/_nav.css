@@ -38,4 +38,8 @@ li {
   ul {
     display: none;
   }
+
+  .header-img {
+    background-attachment: initial;
+  }
 }
