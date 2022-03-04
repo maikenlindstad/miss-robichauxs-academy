@@ -11,8 +11,9 @@ export default function createMenu() {
     let authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"><li>My page</li></a>`;
 
     if (username) {
-        authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"><li>${username}'s page</li></a>
-        <a href="" id="logout"><li>Log out</li></a>`;
+        authLink = `<div class="dropdown ${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"><li><span>${username}'s page</span></li><div id="logout" class="dropdown-content">Log out</div><div>
+        
+        `;
     }
 
     menuContainer.innerHTML = `<ul>
