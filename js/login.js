@@ -44,7 +44,7 @@ function submitForm(event) {
 
 
     if (usernameValue.length === 0 || passwordValue.length === 0) {
-        return displayMessage("warning", "Incorrect login values.", ".message-container");
+        return displayMessage("warning", "Enter login details.", ".message-container");
     }
 
     doLogin(usernameValue, passwordValue);

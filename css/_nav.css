@@ -19,10 +19,11 @@ ul {
 }
 
 li {
-  padding: 17px 5px;
+  padding: 0 5px;
 }
 
 .active {
+  padding: 20px 5px;
   background-color: rgb(255, 251, 241);
 }
 
@@ -49,6 +50,7 @@ li {
     position: absolute;
   }
   ul {
+    padding-inline-start: 0;
     display: none;
   }
 
@@ -68,7 +70,7 @@ li {
     justify-content: space-between;
   }
   .label-for-menu {
-    padding: 20px;
+    padding: 5px 20px;
   }
   .label-for-menu,
   #hamburger-menu:checked ~ ul {

@@ -70,6 +70,15 @@
     margin: 15px;
   }
 
+  .latest-news {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .latest-news div {
+    border-bottom: solid 1px black;
+  }
+
   #stevie-nicks {
     height: 150px;
   }

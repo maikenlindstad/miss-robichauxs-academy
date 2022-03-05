@@ -80,6 +80,10 @@ p {
   text-transform: none;
 }
 
+.latest-news h2 {
+  padding-left: 10px;
+}
+
 /* .latest-news div {
   margin: 10px 0;
 } */
@@ -99,6 +103,9 @@ p {
 @media only screen and (max-width: 898px) {
   .unfolded-menu a {
     color: rgb(255, 251, 241);
+  }
+  .active:hover {
+    color: #1e1b14;
   }
   .disabled {
     color: #1e1b1465 !important;
