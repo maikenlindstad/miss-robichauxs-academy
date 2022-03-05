@@ -42,6 +42,9 @@ li {
 }
 
 @media only screen and (max-width: 898px) {
+  li {
+    padding: 20px 5px;
+  }
   nav {
     justify-content: space-between;
     flex-direction: row-reverse;
