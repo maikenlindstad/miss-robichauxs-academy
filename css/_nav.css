@@ -44,6 +44,9 @@ li {
   nav {
     justify-content: space-between;
     flex-direction: row-reverse;
+    width: 100%;
+    padding: 0;
+    position: absolute;
   }
   ul {
     display: none;
@@ -54,13 +57,18 @@ li {
   }
 
   ul {
-    padding-left: 0;
+    padding-left: 10px;
   }
 
   .unfolded-menu {
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .label-for-menu {
+    padding: 5px;
   }
   .label-for-menu,
   #hamburger-menu:checked ~ ul {
