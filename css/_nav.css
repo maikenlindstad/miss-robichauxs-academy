@@ -68,7 +68,7 @@ li {
     justify-content: space-between;
   }
   .label-for-menu {
-    padding: 5px;
+    padding: 20px;
   }
   .label-for-menu,
   #hamburger-menu:checked ~ ul {
