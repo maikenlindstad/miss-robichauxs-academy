@@ -1,3 +1,8 @@
+#hamburger-menu,
+.label-for-menu {
+  display: none;
+}
+
 nav,
 ul {
   display: flex;
@@ -36,8 +41,29 @@ li {
 }
 
 @media only screen and (max-width: 898px) {
+  nav {
+    justify-content: space-between;
+  }
   ul {
     display: none;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  .unfolded-menu {
+    display: flex;
+    flex-direction: column;
+    /* flex-direction: row-reverse; */
+  }
+  .label-for-menu,
+  #hamburger-menu:checked ~ ul {
+    display: block;
   }
 
   .header-img {
