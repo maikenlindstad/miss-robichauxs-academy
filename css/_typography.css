@@ -101,7 +101,7 @@ p {
 }
 
 @media only screen and (max-width: 898px) {
-  .unfolded-menu a {
+  .navigation-menu a {
     color: rgb(255, 251, 241);
   }
   .active:hover {

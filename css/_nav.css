@@ -24,6 +24,10 @@ nav a {
   background-color: rgb(255, 251, 241);
 }
 
+.title a:hover {
+  color: #1e1b14;
+}
+
 .header-img {
   background-image: linear-gradient(
       rgba(139, 139, 139, 0.5),
@@ -63,7 +67,7 @@ nav a {
     padding-left: 10px;
   }
 
-  .unfolded-menu {
+  .navigation-menu {
     width: 100%;
     display: flex;
     flex-direction: column;

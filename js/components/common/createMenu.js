@@ -3,17 +3,17 @@ import logoutButton from "./logoutButton.js";
 
 export default function createMenu() {
     const { pathname } = document.location;
-
-    const menuContainer = document.querySelector(".unfolded-menu");
-
+    const menuContainer = document.querySelector(".navigation-menu");
     const username = getUsername();
-
     let authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}">My page</a>`;
-
     if (username) {
-        authLink = `<div class="dropdown ${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"><span>${username}'s page</span><div id="logout" class="dropdown-content"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</div><div>
-        
-        `;
+        authLink = `
+                    <div class="dropdown ">
+                        <span><a class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"href="my-page/logged-in.html">${username}'s page</a></span>
+                        <div id="logout" class="dropdown-content">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
+                        </div>
+                    <div>`;
     }
 
     menuContainer.innerHTML = `
@@ -22,7 +22,7 @@ export default function createMenu() {
         <ul>
             <li>
                 <div class="title">
-                    <a href="index.html">
+                    <a href="/">
                         Miss Robichaux's Academy
                     </a>
                 </div>

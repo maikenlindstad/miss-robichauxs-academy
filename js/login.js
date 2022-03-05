@@ -18,7 +18,6 @@ const myPageUrl = baseUrl + "/my-pages/";
 
 (async function () {
     const container = document.querySelector(".container");
-
     try {
         const response = await fetch(myPageUrl);
         const json = await response.json();
@@ -41,36 +40,12 @@ function submitForm(event) {
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
 
-
-
     if (usernameValue.length === 0 || passwordValue.length === 0) {
         return displayMessage("warning", "Enter login details.", ".message-container");
     }
 
     doLogin(usernameValue, passwordValue);
 
-
-    // if (checkLength(username.value, 0) === true) {
-    //     usernameError.style.display = "none";
-    // } else {
-    //     usernameError.style.display = "block";
-    // }
-
-    // if (checkLength(password.value, 5) === true) {
-    //     passwordError.style.display = "none";
-    // } else {
-    //     passwordError.style.display = "block";
-    // }
-
-    // if (validateEmail(email.value) === true) {
-    //     emailError.style.display = "none";
-    // } else {
-    //     emailError.style.display = "block";
-    // }
-
-
-    // console.log(username.value);
-    // console.log(password.value);
 }
 
 async function doLogin(username, password) {
