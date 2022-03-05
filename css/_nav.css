@@ -43,6 +43,7 @@ li {
 @media only screen and (max-width: 898px) {
   nav {
     justify-content: space-between;
+    flex-direction: row-reverse;
   }
   ul {
     display: none;
@@ -59,7 +60,7 @@ li {
   .unfolded-menu {
     display: flex;
     flex-direction: column;
-    /* flex-direction: row-reverse; */
+    flex-direction: row-reverse;
   }
   .label-for-menu,
   #hamburger-menu:checked ~ ul {
