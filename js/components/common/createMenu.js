@@ -21,11 +21,11 @@ export default function createMenu() {
         <input type="checkbox" id="hamburger-menu">
         <ul>
             <li>
-                <a href="index.html">
-                    <div class="title">
+                <div class="title">
+                    <a href="index.html">
                         Miss Robichaux's Academy
-                    </div>
-                </a>
+                    </a>
+                </div>
             </li>
             <li><a href="" class="disabled ${pathname === "/" ? "active" : ""}">Studies</a></li>
             <li><a href="" class="disabled ${pathname === "/" ? "active" : ""}">News</a></li>
