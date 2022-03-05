@@ -1,6 +1,7 @@
 .form-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .login-section {
   display: flex;
@@ -18,9 +19,9 @@
   /* justify-content: center; */
 }
 
-.login-section {
-  padding-top: 60px;
-}
+/* .login-section {
+  padding-top: 20px;
+} */
 label {
   display: flex;
 }
