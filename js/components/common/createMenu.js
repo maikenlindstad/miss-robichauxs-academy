@@ -27,10 +27,10 @@ export default function createMenu() {
                     </a>
                 </div>
             </li>
-            <li><a href="" class="disabled ${pathname === "/" ? "active" : ""}">Studies</a></li>
-            <li><a href="" class="disabled ${pathname === "/" ? "active" : ""}">News</a></li>
-            <li><a href="" class="disabled ${pathname === "/" ? "active" : ""}">About</a></li>
-            <li><a href="" class="disabled ${pathname === "/" ? "active" : ""}">Enrollment</a></li>
+            <li><a href="" class="disabled ${pathname === "studies.html" ? "active" : ""}">Studies</a></li>
+            <li><a href="" class="disabled ${pathname === "news.html" ? "active" : ""}">News</a></li>
+            <li><a href="" class="disabled ${pathname === "about.html" ? "active" : ""}">About</a></li>
+            <li><a href="" class="disabled ${pathname === "enrollment.html" ? "active" : ""}">Enrollment</a></li>
             <li>${authLink}</li>
         </ul>`;
 
