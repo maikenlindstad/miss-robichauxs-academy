@@ -5,12 +5,12 @@ export default function createMenu() {
   const { pathname } = document.location;
   const menuContainer = document.querySelector(".navigation-menu");
   const username = getUsername();
-  let authLink =
-    `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}">My page</a>`;
+  let authLink = `
+    <a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}">My page</a>`;
 
   if (username) {
-    authLink =
-      `<div class="dropdown">
+    authLink = `
+      <div class="dropdown">
         <span><a class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"href="my-page/logged-in.html">${username}'s page</a></span>
         <div id="logout" class="dropdown-content">
           <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
@@ -18,8 +18,8 @@ export default function createMenu() {
       </div>`;
   }
 
-  menuContainer.innerHTML =
-    `<label class="label-for-menu" for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
+  menuContainer.innerHTML = `
+    <label class="label-for-menu" for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
     <input type="checkbox" id="hamburger-menu">
     <ul>
       <li>

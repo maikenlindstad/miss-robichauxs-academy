@@ -17,8 +17,8 @@ const myPageUrl = baseUrl + "/my-pages?populate=*";
     // throw "custom";
 
     json.data.forEach(function (mypage) {
-      container.innerHTML +=
-        `<a class="card" href="details.html?id=${mypage.id}">
+      container.innerHTML += `
+        <a class="card" href="details.html?id=${mypage.id}">
           <img src="http://localhost:1337${mypage.attributes.excerpt.data.attributes.url}">
           <h2>${mypage.attributes.Title}</h2>            
         </a>`;

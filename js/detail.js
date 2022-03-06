@@ -20,8 +20,8 @@ const myPagesUrl = baseUrl + "/my-pages/" + id + "?populate=*";
 
     const container = document.querySelector(".detail-container");
 
-    container.innerHTML =
-      `<h2>${details.data.attributes.Title}</h2>  
+    container.innerHTML = `
+      <h2>${details.data.attributes.Title}</h2>  
       <img src="http://localhost:1337${details.data.attributes.excerpt.data.attributes.url}">
       <p>${details.data.attributes.description}</p>`;
 

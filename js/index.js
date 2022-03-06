@@ -3,8 +3,8 @@ const introSection = document.querySelector(".intro-section");
 const sevenWondersSection = document.querySelector(".seven-wonders-section");
 const mapSection = document.querySelector(".map-section");
 
-header.innerHTML =
-  `<nav class="home-menu">
+header.innerHTML = `
+  <nav class="home-menu">
     <div class="navigation-menu home-menu">
     </div>
   </nav>
@@ -12,8 +12,8 @@ header.innerHTML =
     <h1>Miss Robichaux's Academy</h1> 
   </div>`;
 
-introSection.innerHTML +=
-  `<div>
+introSection.innerHTML += `
+  <div>
     <h2>Miss Robichaux Academy for Exceptional Young Ladies</h2>
     <p>
       "Miss Robichaux's Academy for Exceptional Young Ladies was established as a premier girls' 
@@ -35,8 +35,8 @@ introSection.innerHTML +=
   <div class="stairs">
   </div>`;
 
-sevenWondersSection.innerHTML +=
-  `<div>
+sevenWondersSection.innerHTML += `
+  <div>
     <h2>The Seven Wonders</h2>
     <p>
       Exceptionally exceptional young ladies can request to be tested in the seven wonders if they
@@ -73,5 +73,5 @@ sevenWondersSection.innerHTML +=
       </div>      
     </div>`;
 
-mapSection.innerHTML +=
-  `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.6506704332414!2d-90.08130988255617!3d29.93195749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a589b29359e9%3A0x637f9be429eb77e0!2sBuckner%20Mansion!5e0!3m2!1sno!2sno!4v1646235203223!5m2!1sno!2sno" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
+mapSection.innerHTML += `
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.6506704332414!2d-90.08130988255617!3d29.93195749999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a589b29359e9%3A0x637f9be429eb77e0!2sBuckner%20Mansion!5e0!3m2!1sno!2sno!4v1646235203223!5m2!1sno!2sno" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`;
