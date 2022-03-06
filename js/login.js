@@ -7,96 +7,81 @@ createMenu();
 
 const form = document.querySelector("#loginForm");
 const username = document.querySelector("#username");
-const usernameError = document.querySelector("#usernameError");
+// const usernameError = document.querySelector("#usernameError");
 const password = document.querySelector("#password");
-const passwordError = document.querySelector("#passwordError");
-const email = document.querySelector("#email");
-const emailError = document.querySelector("#emailError");
+// const passwordError = document.querySelector("#passwordError");
+// const email = document.querySelector("#email");
+// const emailError = document.querySelector("#emailError");
 const message = document.querySelector(".message-container");
 
 const myPageUrl = baseUrl + "/my-pages/";
 
 (async function () {
-    const container = document.querySelector(".container");
-    try {
-        const response = await fetch(myPageUrl);
-        const json = await response.json();
+  // const container = document.querySelector(".container");
+  try {
+    const response = await fetch(myPageUrl);
+    const json = await response.json();
 
-        console.log(json.data);
-    } catch (error) {
-        console.log(error);
-        displayMessage("error", error, ".container");
-    }
+    console.log(json.data);
+  } catch (error) {
+    console.log(error);
+    displayMessage("error", error, ".container");
+  }
 })();
 
 
 form.addEventListener("submit", submitForm);
 
 function submitForm(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    message.innerHTML = "";
+  message.innerHTML = "";
 
-    const usernameValue = username.value.trim();
-    const passwordValue = password.value.trim();
+  const usernameValue = username.value.trim();
+  const passwordValue = password.value.trim();
 
-    if (usernameValue.length === 0 || passwordValue.length === 0) {
-        return displayMessage("warning", "Enter login details.", ".message-container");
-    }
+  if (usernameValue.length === 0 || passwordValue.length === 0) {
+    return displayMessage("warning", "Enter login details.", ".message-container");
+  }
 
-    doLogin(usernameValue, passwordValue);
+  doLogin(usernameValue, passwordValue);
 
 }
 
 async function doLogin(username, password) {
-    const url = "http://localhost:1337/api/auth/local";
+  const url = "http://localhost:1337/api/auth/local";
 
-    const data = JSON.stringify({ identifier: username, password: password });
+  const data = JSON.stringify({ identifier: username, password: password });
 
-    const options = {
-        method: "POST",
-        body: data,
-        headers: {
-            "Content-Type": "application/json"
-        }
-    };
-
-    try {
-        const response = await fetch(url, options);
-        const json = await response.json();
-
-        console.log(json);
-
-        message.innerHTML = "";
-
-        if (json.user) {
-
-            saveToken(json.jwt);
-            saveUser(json.user);
-
-            location.href = "my-page/logged-in.html";
-        }
-
-        if (json.error) {
-            displayMessage("warning", "Invalid login details", ".message-container")
-        }
-
-    } catch (error) {
-        console.log(error);
+  const options = {
+    method: "POST",
+    body: data,
+    headers: {
+      "Content-Type": "application/json"
     }
-}
+  };
 
+  try {
+    const response = await fetch(url, options);
+    const json = await response.json();
 
-function checkLength(value, len) {
-    if (value.trim().length > len) {
-        return true;
-    } else {
-        return false;
+    console.log(json);
+
+    message.innerHTML = "";
+
+    if (json.user) {
+
+      saveToken(json.jwt);
+      saveUser(json.user);
+
+      location.href = "my-page/logged-in.html";
     }
-};
 
-function validateEmail(email) {
-    const regEx = /\S+@\S+\.\S+/;
-    const patternMatches = regEx.test(email);
-    return patternMatches;
+    if (json.error) {
+      displayMessage("warning", "Invalid login details", ".message-container")
+    }
+
+  } catch (error) {
+    console.log(error);
+  }
 }

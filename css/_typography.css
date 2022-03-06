@@ -101,12 +101,23 @@ p {
 }
 
 @media only screen and (max-width: 898px) {
-  .navigation-menu a {
-    color: rgb(255, 251, 241);
-  }
-  .active:hover {
+  .navigation-menu a,
+  i {
     color: #1e1b14;
   }
+  .home-menu a,
+  .home-menu i {
+    color: rgb(255, 251, 241);
+  }
+
+  .active {
+    text-decoration: underline;
+  }
+
+  .navigation-menu a .active {
+    color: #1e1b14;
+  }
+
   .disabled {
     color: #1e1b1465 !important;
   }

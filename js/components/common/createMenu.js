@@ -2,21 +2,21 @@ import { getUsername } from "../../utils/storage.js";
 import logoutButton from "./logoutButton.js";
 
 export default function createMenu() {
-    const { pathname } = document.location;
-    const menuContainer = document.querySelector(".navigation-menu");
-    const username = getUsername();
-    let authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}">My page</a>`;
-    if (username) {
-        authLink = `
+  const { pathname } = document.location;
+  const menuContainer = document.querySelector(".navigation-menu");
+  const username = getUsername();
+  let authLink = `<a href="my-page.html" class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}">My page</a>`;
+  if (username) {
+    authLink = `
                     <div class="dropdown ">
                         <span><a class="${pathname === "/my-page.html" || pathname === "/my-page/logged-in.html" ? "active" : ""}"href="my-page/logged-in.html">${username}'s page</a></span>
                         <div id="logout" class="dropdown-content">
                             <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
                         </div>
                     <div>`;
-    }
+  }
 
-    menuContainer.innerHTML = `
+  menuContainer.innerHTML = `
         <label class="label-for-menu" for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
         <input type="checkbox" id="hamburger-menu">
         <ul>
@@ -34,5 +34,5 @@ export default function createMenu() {
             <li>${authLink}</li>
         </ul>`;
 
-    logoutButton();
+  logoutButton();
 }
