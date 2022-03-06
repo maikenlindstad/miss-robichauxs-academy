@@ -1,3 +1,6 @@
+.container {
+  padding: 20px;
+}
 .form-main {
   display: flex;
   flex-direction: column;
@@ -8,7 +11,6 @@
   flex-direction: column;
   align-items: center;
   border: solid #dfd6c2 6px;
-  /* margin: auto; */
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -16,12 +18,8 @@
   width: 100%;
   margin: 50px 20px;
   height: 300px;
-  /* justify-content: center; */
 }
 
-/* .login-section {
-  padding-top: 20px;
-} */
 label {
   display: flex;
 }

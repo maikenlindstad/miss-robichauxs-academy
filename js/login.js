@@ -7,17 +7,12 @@ createMenu();
 
 const form = document.querySelector("#loginForm");
 const username = document.querySelector("#username");
-// const usernameError = document.querySelector("#usernameError");
 const password = document.querySelector("#password");
-// const passwordError = document.querySelector("#passwordError");
-// const email = document.querySelector("#email");
-// const emailError = document.querySelector("#emailError");
 const message = document.querySelector(".message-container");
 
 const myPageUrl = baseUrl + "/my-pages/";
 
 (async function () {
-  // const container = document.querySelector(".container");
   try {
     const response = await fetch(myPageUrl);
     const json = await response.json();
@@ -25,7 +20,7 @@ const myPageUrl = baseUrl + "/my-pages/";
     console.log(json.data);
   } catch (error) {
     console.log(error);
-    displayMessage("error", error, ".container");
+    displayMessage("error", "We apologize. An error has occurred. Please come back later.", ".container");
   }
 })();
 

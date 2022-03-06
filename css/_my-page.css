@@ -36,7 +36,7 @@ span {
   cursor: pointer;
   display: none;
   position: absolute;
-  padding: 10px 0;
+  padding: 10px 20px;
   z-index: 1;
   margin-top: 10px;
 }
@@ -56,7 +56,7 @@ span {
   .dropdown-content {
     display: block;
     position: unset;
-    color: rgb(255, 251, 241);
+    color: #1e1b14;
     width: 139px;
     box-shadow: 0 0 0;
     padding: 30px 0;

@@ -84,10 +84,6 @@ p {
   padding-left: 10px;
 }
 
-/* .latest-news div {
-  margin: 10px 0;
-} */
-
 .label-for-menu {
   font-size: 2rem;
   color: rgb(255, 251, 241);
@@ -106,6 +102,7 @@ p {
     color: #1e1b14;
   }
   .home-menu a,
+  .home-menu .dropdown-content,
   .home-menu i {
     color: rgb(255, 251, 241);
   }

@@ -1,6 +1,5 @@
 import { clearStorage } from "../../utils/storage.js";
 
-
 export default function logoutButton() {
   const button = document.querySelector("#logout");
 
@@ -11,7 +10,6 @@ export default function logoutButton() {
       if (doLogout) {
         clearStorage();
         location.href = "../my-page.html";
-        // window.location.replace('https://miss-robichauxs-academy.netlify.app/index.html')
       }
     }
   }
