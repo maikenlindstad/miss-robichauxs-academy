@@ -29,7 +29,8 @@
 }
 
 .stairs {
-  background-image: url(../images/the-stairs.jpg);
+  background-image: url(../images/mra-angel-stairs.jpg);
+  transform: scaleX(-1);
   background-size: cover;
   max-width: 800px;
   width: 100%;
